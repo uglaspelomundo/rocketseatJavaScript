@@ -1,12 +1,13 @@
 <html>
-    <header>
-        <title>Curso JavaScript</title>
-    </header>
-    <body>
+<header>
+    <title>Curso JavaScript</title>
+</header>
+
+<body>
 
 
 
-        <script>
+    <script>
         // javascript
         // VARIAVEIS
         // String
@@ -28,7 +29,6 @@
             humano: true,
         };
 
-        // funções global
         // console.log(alunos);
         // console.log(aluno);
         // console.log(alunos[1])
@@ -46,10 +46,157 @@
 
         x += 3; // (x = x + 3; )
 
-        console.log(resultado);
-        console.log(x)
+        // console.log(resultado);
+        // console.log(x)
 
 
-        </script>
-    </body>
+
+        // FUNCOES
+
+        function soma(numero, numero2) {
+            var resultado = numero + numero2;
+
+            return resultado
+        }
+
+        var resultado = soma(1, 2);
+        // console.log(resultado)
+
+
+        // CONDICIONAIS
+        function retornaSexo(sexo) {
+
+            // if (sexo === 'M') {
+            //     return 'Masculino';
+
+            // } else if (sexo === 'F') {
+            //     return 'Feminino';
+
+            // } else {
+            //     return 'Outro';
+            // }
+
+            switch (sexo) {
+                case 'M':
+                    return 'Masculino';
+
+                case 'F':
+                    return 'Feminino';
+
+                default:
+                    return 'Outro';
+
+            }
+        }
+
+
+        var resultado = retornaSexo('M')
+        // console.log(resultado)
+
+
+
+        // OPERACOES LOGICOS
+        var sexo = 'F', idade = 23;
+
+        //AND = E
+        if (sexo === 'F' && idade >= 23) {
+            // console.log('OK1')
+        }
+
+        //OR = OU
+        if (sexo === 'M' || idade >= 24) {
+            // console.log('OK2')
+        } else {
+            // console.log('ERRO2')
+        }
+
+
+        // NOT = Negando
+        if (sexo !== 'M') {
+            // console.log('OK3')
+        } else {
+            // console.log('ERRO3')
+        }
+
+
+
+        var feminino;
+        if (sexo === 'F') {
+            feminino = true;
+        } else {
+            feminino = false;
+        }
+
+        // Usando o mesma logica a cima
+        var feminino2 = sexo === 'M';
+
+        // console.log(feminino)
+        // console.log(feminino2)
+
+
+
+        // CONDICAO TERNARIA
+        var retorno = (sexo === 'F') ? 'Feminino' : 'Masculino'
+        //console.log(retorno)
+
+
+
+        // ESTRUTURTA DE REPETICAO
+        // FOR
+        for (var i = 0; i <= 100; i++) {
+            //console.log(i)
+        }
+
+        // WHILE
+        var j = 0;
+        while (j <= 100) {
+            //console.log(j);
+
+            j++;
+        }
+
+
+        // INTERVALO E TIMEOUT
+        function exibeAlgo() {
+            //console.log('Hello');
+        }
+        setInterval(exibeAlgo, 1000)
+
+        function exibeAlgo1() {
+            //console.log('World');
+        }
+        setTimeout(exibeAlgo1, 5000)
+
+
+        // EXERCICIO 1
+        // Crie uma função que dado o objeto a seguir:
+        // Retorne o seguinte conteúdo:
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        function obterDados() {
+            var end = endereco
+            console.log('EXERCICIO 1');
+            console.log('O usuario mora em ' + end.cidade + ' / ' + end.uf + ', no bairro ' + end.bairro + ', na rua "' + end.rua + '" com n: ' + end.numero);
+        }
+
+        obterDados()
+
+
+        // EXERCICIO 2
+        // Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+        function pares(x, y) {
+    
+        }
+        pares(32, 321);
+
+
+    </script>
+</body>
+
 </html>
