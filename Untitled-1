@@ -1,0 +1,103 @@
+// 1º EXERCICIO
+	var endereco = {
+		rua: 'Rua dos pinheiros',
+		numero: 1293,
+		bairro: 'Centro',
+		cidade: 'são Paulo',
+		uf: 'SP',
+	};
+
+	function end() {
+		console.log('1°Exercicio');
+		console.log(
+			'O usuario mora em ' +
+				endereco.cidade +
+				'/' +
+				endereco.uf +
+				', no bairro ' +
+				endereco.bairro +
+				", na rua '" +
+				endereco.rua +
+				"' com n° " +
+				endereco.numero +
+				'.'
+		);
+	}
+
+	end(endereco);
+	console.log();
+//FIM PRIMEIRO EXERCICIO
+
+// 2º EXERCICIO
+	function pares(x, y) {
+		console.log('2°Exercicio');
+		for (var i = x; i <= y; i++) {
+			if (i % 2 === 0) {
+				console.log(i);
+			}
+		}
+	}
+
+	pares(0, 16);
+	console.log();
+// FIM SEGUNDO EXERCICIO
+
+// 3º Exercicio
+	function temHabilidade(skills) {
+		console.log('3ºExercicio');
+
+		return console.log(skills.indexOf('Javascript'));
+	}
+	var skills = ['Javascript', 'ReactJS', 'React Native'];
+	temHabilidade(skills);
+	console.log();
+// FIM TERCEIRO EXERCICIO
+
+// 4º Exercicio
+	function exp(anos) {
+		console.log('4ºExercicio');
+		if (anos <= 1) {
+			return 'Iniciante';
+		}
+		if (anos > 1 && anos <= 3) {
+			return 'Intermediário';
+		}
+		if (anos > 3 && anos <= 6) {
+			return 'Avançado';
+		} else {
+			return 'Jedi Master';
+		}
+	}
+	var anosEstudo = 10;
+	var aux = exp(anosEstudo);
+	console.log(aux);
+	console.log();
+// FIM QUARTO EXERCICIO
+
+// 5º Exercicio
+	var usuarios = [
+		{
+			nome: 'Diego',
+			habilidades: ['Javascript', 'ReactJS', 'Redux'],
+		},
+		{
+			nome: 'Gabriel',
+			habilidades: ['VueJS', 'Ruby on Rails', 'Elixir'],
+		},
+	];
+
+	function exibe(users) {
+		console.log('5ºExercicio');
+		for (hab of users) {
+			console.log(
+				'O ' + hab.nome + ' possui as habilidades: ' + hab.habilidades.join(', ')
+			);
+		}
+	}
+	exibe(usuarios);
+	console.log();
+// FIM QUINTO EXERCICIO
+
+// 6º Exercicio
+	
+// FIM SEXTO EXERCICIO
