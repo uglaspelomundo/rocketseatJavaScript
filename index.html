@@ -179,23 +179,93 @@
             uf: "SP"
         };
 
-        function obterDados() {
-            var end = endereco
-            console.log('EXERCICIO 1');
-            console.log('O usuario mora em ' + end.cidade + ' / ' + end.uf + ', no bairro ' + end.bairro + ', na rua "' + end.rua + '" com n: ' + end.numero);
+        function obterEnd() {
+            console.log("1º exercício")
+            console.log(`O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}`)
         }
-
-        obterDados()
+        obterEnd()
 
 
         // EXERCICIO 2
         // Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
-        function pares(x, y) {
-    
+        function pares (x, y) {
+            console.log('2°Exercicio');
+            for (var i=x; i<=y; i++) {
+                if (i % 2 === 0)
+                    console.log(i)
+            }
         }
-        pares(32, 321);
+        pares(32, 321)
 
 
+        // EXERCICIO 3
+        // Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"
+        // e retorna um booleano true/false caso exista ou não.
+        function temHabilidade(skills) {
+            console.log('3°Exercicio');
+            var result = skills.indexOf('Javascript')
+            
+            var exist = (result >= 0)
+            console.log(exist)
+
+        }
+        var skills = [ "Javascript", "ReactJS", "React Native" ]
+        temHabilidade(skills); // true ou false
+
+
+        // EXERCICIO 4
+        // Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:
+        function experiencia(anosEstudo) {
+            console.log('4°Exercicio');
+            var anos = anosEstudo
+            switch (anos) {
+                case (anos <= 1):
+                console.log('Iniciante');
+                break;
+
+                case (anos <= 3):
+                console.log('Intermediário');
+                break;
+
+                case (anos <= 6):
+                console.log('Avançado');
+                break;
+
+                default:
+                console.log('Jedi Master');
+            }
+        }
+
+        var anosEstudo = 7;
+        experiencia(anosEstudo)
+
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidade: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+              nome: "Gabriel",
+              habilidade: ["VueJS", "Ruby on Rails", "Elixir"]  
+            }
+        ];
+
+        function exibe(users) {
+		console.log('5ºExercicio');
+        // console.log(users)
+            for (user of users) {
+                console.log(
+                    `O ${user.nome} possui as habilidades: ${user.habilidade.join(', ')}`
+                )
+            }
+        }
+        exibe(usuarios);
     </script>
 </body>
 
